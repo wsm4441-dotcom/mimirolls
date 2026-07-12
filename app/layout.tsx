@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    title: "mimirolls🍥",
+    description: "ميمي رولز طازجة داخل جدة",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -27,10 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ar"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
